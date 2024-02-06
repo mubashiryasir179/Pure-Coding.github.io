@@ -1,0 +1,1916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fixing-layout.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://kit.fontawesome.com/9437e2be2a.js" crossorigin="anonymous"></script>
+    <title>Fixing-layouts</title>
+
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: sans-serif;}
+
+body{
+    text-align: center;
+    background-color: rgb(30 41 59);}
+
+
+    html,body{
+        padding: 0;
+        margin:0;
+        text-align: center;
+    }
+
+
+    /* div{NAV-BAR} */
+
+     nav ul li a{
+        /* scroll-behavior: smooth; */
+        padding: 0px 12px 0px 12px;
+    }
+    .container{
+        display: flex;
+        justify-content:space-around;
+      
+    }
+    .left-image{
+        display: block;
+        padding:0px 0px 0px 25px;
+        bottom:-45px;
+        clip-path:circle(60px at 119px 100px);
+        position: absolute;
+    }
+    
+    
+    ul li a{
+        text-decoration:none;
+        font-family: sans-serif; 
+        color: white;
+        letter-spacing:3px;
+        padding: 0px 1.5rem;
+        left: 9rem;    
+        position: relative;
+        }
+
+    ul li a::before{
+        content:"" ;
+        width:15px;
+        height:19px;
+        position:absolute;
+        top:9px;
+        left:7px;
+        border:2px solid blue;
+        border-width:0 0 2px 2px;
+        transition:all 1s;
+    
+    
+    }
+    ul li a::after{
+        content:"";
+        width:15px;
+        height:19px;
+        position:absolute;
+        bottom:9px;
+        right:7px;
+        border: 2px solid blue;
+        border-width:2px 2px 0 0;
+        transition: all 1s;
+    
+    }
+    ul li a:hover{
+        transition-duration:2s;
+        font-family: sans-serif;
+        transition: ease-out;
+        background-color: rgb(45, 213, 255);
+    }
+
+    ul li a:hover::before{
+        top:0;
+        left:0;
+        transition:1s;
+    }
+
+    ul li a:hover::after{
+        bottom:0;
+        right:0;
+        transition:1s;
+    }
+    
+    .right-nav{
+        display:flex;
+        float:right;
+        list-style:none;
+        gap:4rem;
+        margin: 0px 170px 0px 10px;
+        font-variant-caps: small-caps;
+        font-size: 18px;
+        font-weight:550;
+        letter-spacing:1.5px;
+        position: relative;
+    }
+
+    .not{
+        display:none;
+    }
+
+    .cross{
+        display: none;
+    }
+
+    .creation{
+      color: white;
+      position:absolute; 
+      font-size: x-large;
+      display: flex;      
+      right: 0px;
+      top: 145px;
+      left: 55px;
+    }
+
+    ul{
+        background-color:rgba(70, 68, 68, 0.603);
+        height:15rem;
+        background-size:cover;
+    }
+    
+
+    nav {
+        background:url(background\ image.jpg); 
+        background-blend-mode:darken;
+        background-repeat:no-repeat;
+        height:150vh;    
+        background-size: cover;}
+    nav ul,.creation{
+        backdrop-filter: blur(1.5px);
+        min-width:-webkit-fill-available;}
+
+
+        .Slide-bar,.Slide-nav{
+            display: none;
+            background: none;
+        }
+
+    @media screen and (max-width:900px) { 
+           .right-nav{
+            font-size:15px;}
+
+            .creation{
+                top: 155px;  
+            }
+}
+
+@media screen and (max-width:842px){
+            .right-nav{
+              font-size:13px;}
+
+}
+@media screen and (max-width:800px){
+            .right-nav{
+              font-size:13px;
+              gap:50px;
+              margin: 50px 150px 0px 10px;}
+
+              .creation{
+               font-size:large; 
+               top:190px;
+               color: black;
+               left:70px;
+              }
+
+}
+
+@media screen and (max-width:767px){
+    .right-nav{
+        font-size: 13px;
+        gap: 32px;
+        margin: 54px 145px 0px 10px;}
+
+        .left-image{
+            bottom: -41px;
+            clip-path: circle(48px at 104px 81px);}
+}
+
+
+@media screen and (max-width:700px){
+                .none{
+                    display:none;
+                }
+                .not{
+                    display: block;
+                    cursor:pointer ;
+                    border: none;
+                } 
+
+                .cross{
+                    display:block;
+                    border:none;
+                }
+
+                .left-image{
+                    bottom:-9px;
+                    clip-path:circle(40px at 95px 85px);}
+
+                    .right-nav{
+                        margin: 54px 48px 0px 10px;
+                    }
+
+                    .creation{
+                        left:51px;   
+                    }
+
+                    .Slide-bar,.Slide-nav{
+                        display: flex;
+                        top: 0;
+                        position: absolute;
+                        text-align: center;
+                        padding:60px 0px 0px 30px;
+                        list-style:none;
+                        height:60vh;
+                        background:none;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+
+                    .Slide-bar{
+                        padding: 16px 310px 0px 1px;
+                    }
+
+                    .Slide-nav{
+                        padding: 64px 0px 0px 0px;
+                        left:88px
+                    }
+                                    
+}              
+
+
+
+
+@media screen and (max-width:600px){
+    .left-image{
+        bottom:11px;
+        clip-path: circle(44px at 90px 70px);}
+
+        .Slide-bar{
+            padding: 16px 341px 0px 1px;
+        }
+
+        .right-nav{
+            margin: 54px 48px 0px 10px;
+        }
+        .Slide-nav{left:42px;
+            padding: 64px 0px 0px 0px;
+ }
+}
+
+
+@media screen and (max-width:550px){
+    .left-image{
+        bottom:20px;
+        clip-path: circle(40px at 99px 62px);
+        padding:0px 0px 0px 40px;}
+        
+        .right-nav{
+            margin: 54px 48px 0px 10px;
+        }
+
+        .Slide-bar{
+            padding: 9px 280px 0px 1px;
+        }
+}
+
+
+
+@media screen and (max-width:500px){
+    .left-image{
+        bottom:20px;
+        clip-path: circle(40px at 107px 58px);
+        padding: 0px 0px 0px 54px;} 
+
+        .right-nav{
+            margin: 54px 48px 0px 10px;
+        }
+
+        .Slide-bar{
+            padding: 9px 320px 0px 1px;
+        }
+        
+        .Slide-nav{left:-3px;}
+}
+
+
+
+@media screen and (max-width:463px){
+    .left-image{
+        bottom:20px;
+        clip-path: circle(33px at 115px 49px);
+        padding: 0px 0px 0px 66px;}
+
+        .right-nav{
+            margin: 54px 48px 0px 10px;
+        }
+
+        .Slide-bar{
+            padding: 9px 295px 0px 1px;
+        }
+
+        .Slide-nav{left:-8px;
+            font-size: small;
+        }  
+}
+
+
+@media screen and (max-width:412px){
+    .left-image{
+        bottom:31px;
+        clip-path: circle(31px at 119px 51px);
+        padding: 0px 0px 0px 77px;
+        }  
+        .right-nav{
+            margin: 54px 48px 0px 10px;
+        }
+}
+
+  
+
+@media screen and (max-width:360px){
+
+    .left-image{
+    clip-path: circle(28px at 115px 40px);
+    padding: 0px 0px 0px 79px;
+    }
+    .right-nav{
+        margin: 54px 48px 0px 10px;
+    }
+
+    .Slide-nav{left:-51px;}
+}
+@media screen and (max-width:320px){
+    .left-image{
+        clip-path: circle(28px at 115px 28px);
+        padding: 0px 0px 0px 79px;
+        }
+
+        .right-nav{
+            margin: 54px 48px 0px 10px;
+        }
+} 
+
+
+
+
+
+
+
+
+/* div{ 3 Boxes  } */
+
+h1{
+    color: white;
+    padding:80px 0px 0px 0px  ;
+}
+
+  .container{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.wrapper,.box,.content{
+    box-shadow: black;
+    background-color:rgb(45, 213, 255) ;
+    width:17rem;
+    height:23rem;
+    overflow: hidden;
+    border-radius:2rem;
+    }
+
+    .wrapper:hover{
+        border: 3px solid white;
+        cursor: pointer;
+    }
+    .box:hover{
+        border: 3px solid white;
+        cursor: pointer;
+
+    }
+    .content:hover{
+        border: 3px solid white;
+        cursor: pointer;
+    }
+
+
+    .basic{
+        text-align: center;
+        color: white;
+        background-color:black;
+        position: absolute;
+        margin-left:2.3rem;
+        padding:7px 7px 7px 7px;
+        padding-right:15px;
+        padding-left:15px;
+        border-radius:3rem;
+        font-size:1.2rem;
+        font-family:sans-serif;
+        font-weight: 600;
+    }
+    
+  
+    .standard{
+        text-align: center;
+        color: white;
+        background-color:black;
+        position: absolute;
+        margin-left:1.5rem;
+        padding:7px 7px 7px 7px;
+        padding-right:15px;
+        padding-left:15px;
+        border-radius:3rem;
+        font-size:1.1rem;
+        font-family:sans-serif;
+        font-weight: 600;
+    }
+
+    .professional{
+        text-align: center;
+        color: white;
+        background-color:black;
+        position: absolute;
+        margin-left:1rem;
+        padding:9px 9px 9px 9px;
+        padding-right:15px;
+        padding-left:15px;
+        border-radius:3rem;
+        font-size:1rem;
+        font-family:sans-serif;
+        font-weight: 700;
+    }
+
+    .coding,.wordpress,.graphic{
+        text-align:center;
+        color: white;
+        font-size:x-large;
+        font-family: sans-serif;
+    }
+   
+    .box{
+       text-align:center;
+       padding-top:1rem; 
+    }
+    .dollar{
+        font-weight: bold;
+        text-align:center;
+        padding-top:2rem;
+        font-size:2.3rem;        
+    }
+    .ocuppy{
+        font-family:sans-serif;
+        color: black;
+    }
+
+
+        @media screen and (max-width:768px){
+            .container{
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                gap:40px;
+            }
+        } 
+
+
+
+
+
+
+
+
+
+/* div{   3 CIRCLES   }  */
+
+  .full-box{
+    display:flex;
+    justify-content: space-around;
+    width:100%;
+    height:23rem;
+    background-color: rgb(45, 213, 255);
+}
+.half-box1,.half-box2,.half-box3{
+    margin:1rem 0px 0px 0px;
+    width:12rem;
+    height:12rem;
+    border-radius: 10rem;
+    background-color:white;
+}
+.child{
+    color:rgb(45, 213, 255);
+    text-align: center;
+   } 
+
+@media screen and (max-width:800px) {
+    .full-box{
+        width:50rem;
+    }
+}
+
+@media screen and (max-width:768px){
+
+    .full-box{
+       width:48rem;
+    }
+}
+@media screen and (max-width:720px){
+    .full-box{
+        width:40rem;
+     }
+
+     .half-box1,.half-box2,.half-box3{
+        margin-top:2rem;
+        width:10rem;
+        height:10rem;}
+}
+
+@media screen and (max-width:600px){
+    .full-box{
+        width:38rem;
+     }
+}
+
+@media screen and (max-width:412px){
+    .full-box{
+        width:26rem;
+        height:25rem
+    }
+
+    .half-box1,.half-box2,.half-box3{
+        width:6rem;
+        height:6rem;}
+}
+@media screen and (max-width:360px){
+    .full-box{
+        width:23rem;
+        height:25rem;
+    }
+
+    .half-box1,.half-box2,.half-box3{
+        width:5.5rem;
+        height:5.5rem;}
+}
+
+@media screen and (max-width:320px){
+    .full-box{
+        width:20rem;
+        height:25rem;
+    }
+}
+
+
+
+
+
+
+/* div{REPONSIVE-ANIMATIONS} */
+
+  .cre-ation{
+    color:white;
+    padding:80px 0px 0px 0px ;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 2.5rem;
+}
+
+
+.slider{
+    height:260px;
+    left:5.4rem;
+    position: absolute;
+    width:80%;
+    place-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+}
+.slider-track{
+    display: flex;
+    width: calc(250px * 18);
+    animation: scroll 40s linear infinite ;
+}
+.slider-track:hover::-webkit-scrollbar-button{
+    animation-play-state:paused;
+}
+
+@keyframes scroll{
+  0%{
+      transform: translateX(0);
+  }
+  100%{
+      transform: translateX(calc(-250px* 9));
+  }
+}
+.slide{
+  height:400px;
+  width:400px;
+  display:flex;
+  padding: 15px;
+  perspective:100px;
+}
+img{
+  transition:transform 1s;
+}
+img:hover{
+  transform: translateZ(20px);
+  }
+
+.slider::before,.slider::after{
+background:linear-gradient(top right,rgba(255,255,255,1)e2,rgba(255,255,255,0)100%);
+content: '';
+height:100%;
+position: absolute;
+width:15%;
+z-index:10000;
+}
+
+.slider::before{
+left:0;
+top:0;
+}
+.slider::after{
+right:0;
+top:0;
+transform: rotateZ(100deg);
+}
+
+
+
+@media screen and (max-width:600px) {
+    .slider{
+        left: 4rem;
+    }
+
+    .cre-ation{
+        font-size:2rem;
+    }
+
+    .slide{
+        width:300px;
+        height:300px;
+    }
+}
+
+@media screen and (max-width:500px){
+
+    .slider{
+        left:2.9rem;
+    }
+    .slide{
+        width:200px;
+        height:250px;
+    }
+}
+
+@media screen and (max-width:412px){
+    .slider{
+        left:2.6rem;
+        display: flex;
+        justify-content: space-around;
+    }
+    .slide{
+        width:200px;
+        height:200px;
+    }
+}
+
+@media screen and (max-width:360px){
+    .slider{
+        left:2.2rem ;
+    }
+
+    .cre-ation{
+        font-size:1.7rem;
+    }
+}
+
+@media screen and (max-width:320px){
+    .slider{
+        left:2rem;
+    }
+
+    .cre-ation{
+        font-size:1.6rem;
+    }
+
+}
+
+
+
+
+
+
+
+/* div{ANIMATION-FORM} */
+
+  .father{
+    position: relative;
+    box-sizing: border-box;
+    margin:4rem 11rem;
+    display: inline-table;
+    height:45rem;
+    width: 35rem;
+    padding: 0.5rem;
+    border:8px solid ;
+    overflow: hidden;  
+    background-color: rgb(255, 255, 255);
+}
+
+.form-heading{
+color: white;
+padding:80px 0px 0px 0px;
+}
+
+
+.require-info{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    font-size: xx-large;
+    font-weight:bolder;
+    left: 5rem;
+}
+.require{
+    color:rgb(17, 13, 255);
+}
+.info{
+    text-align: center;
+    padding-left: 2rem;
+    color: rgb(255, 11, 11);
+}
+
+
+.big-box{
+    position:absolute;
+    z-index:2;
+    height:32rem;
+    width:27rem;
+    bottom:25rem;
+    background-color: rgb(255, 11, 11);
+    border-radius: 4rem;
+    transform-origin:bottom right;
+    animation:big linear 6s infinite;
+}
+@keyframes big {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.last-box{
+    position:absolute;
+    z-index:2;
+    height:32rem;
+    width:27rem;
+    left:21rem;
+    top:25rem;
+    bottom:1rem;
+    background-color:rgb(17, 13, 255);
+    border-radius: 4rem;
+    transform-origin:top left;
+    animation:last linear infinite 6s;
+}
+@keyframes last {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+form{
+    height:44rem;
+    font-family:sans-serif;
+    font-size: larger;
+    letter-spacing:1px;
+    position: relative;
+    z-index:1000;
+    background-color:rgb(45, 213, 255) ;
+}
+input{
+    border: none;
+}
+
+.easy{
+    margin-top:2rem;
+}
+
+.difficult{
+padding: 35px 0px 35px 0px;
+}
+.easy,.difficult{
+    display: flex;
+    justify-content: space-around;
+    font-size:2rem ;
+    border:none;
+}
+.fa-solid {
+    padding:.8rem 0 0 .8rem;
+}
+.child{
+    
+    height:2rem;
+    text-align: center;
+}
+.comments{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.textarea{
+    text-align: center;
+    padding-top:1rem;
+   
+}
+.submit-button{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    margin-top: 24px;
+    cursor:pointer ;
+    border:none;
+   
+}
+
+.select-gender{
+    color:black;
+    display: block;
+    cursor:pointer ;
+    text-align: center;
+    align-items: center;
+    justify-content:center;   
+}
+
+.select-any{
+  display: flex;
+  justify-content: center;
+}
+
+.selection{
+    color:white;
+    background-color: black;
+}
+
+button{
+    width:25rem;
+    height:2.5rem;
+    margin-bottom:2rem;
+    color: white;
+    font-size:large;
+    letter-spacing:1px;
+    background-color:black;
+    border: 2px solid white;
+}
+
+.top{
+    border: 2px solid white;
+    color: white;
+    background-color:black;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top:0.5rem;
+    padding-bottom:0.5rem;
+   
+}
+.left,.right{
+    color:black;}
+
+
+    @media screen and (max-width:800px){
+        .father{
+            margin:6rem 8rem; 
+        }
+    }
+
+    @media screen and (max-width:768px){
+        .father{
+            margin:6rem 7rem; 
+        }
+    }
+
+
+    @media screen and (max-width:700px){
+        .father{
+            margin:6rem 3rem; 
+        }
+    }
+
+    @media screen and (max-width:600px){
+        .father{
+            margin:6rem 1.2rem; 
+            width:49px;
+        }
+    }
+
+    @media screen and (max-width:500px){
+
+        form{
+            height:43rem;
+            width:25rem;
+        }
+        .father{
+            height:43rem;
+            width:inherit;
+        }
+
+
+        button{
+            width:14rem;
+        }
+
+        .easy,.difficult{
+            display: flex;
+            gap: 20px;
+            flex-direction: column;
+            padding: 20px 36px 0px 36px;
+        }
+
+        .easy{
+            padding: 0px 36px 0px 36px;
+        }
+
+        .require-info{
+            display:flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .require{
+            padding: 0px 0px 14px 0px;
+        }
+
+        .top{
+            padding: 0.5rem 1.4rem;
+        }
+
+
+    }
+
+
+    @media screen and (max-width:412px){
+
+        form{
+            height:39rem;
+            width:20rem;
+        }
+        .father{
+            height:41rem;
+            width:10rem;
+            margin: 4rem 2px;
+        }
+
+        .fa-5x {
+            font-size: 2em;
+            margin-top:0px;
+            line-height:0;}
+
+
+        button{
+            width:9rem;
+            font-size: medium;
+            height:2rem;
+        }
+    }
+
+    @media screen and (max-width:360px){
+        form{
+            height:38rem;
+            width:18rem;
+        }
+
+        .form-heading{
+            font-size: larger;
+
+        }
+
+        .father{
+            height:40rem;
+            width:8rem;
+            margin: 4rem 2px;
+        }
+
+        .top {
+            padding: 0.5rem 1rem;
+        }
+
+        .submit-button{
+            margin-top:0px;
+        }
+
+        button{
+            width: 9rem;
+            font-size: medium;
+            height:2rem;
+        }
+
+        .comments{
+            padding: 0px 49px 0px 40px;
+        }
+    }
+
+
+
+
+
+      /* div{CLIENTS-REMARKS} */
+
+       .testimonial-head{
+        color:white;
+        border: 3px solid rgb(45, 213, 255);
+        display: inline-flex;
+        padding:10px 10px 10px 10px ;
+        letter-spacing: 1.5px;
+    }
+    
+    .parent-code{
+        color:white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-around;
+        font-family: sans-serif;
+        letter-spacing:1px ;
+    }
+    .html-code{
+        color:white;
+        }
+   
+    .para-coding{
+        top: 5rem;
+    }
+    .icon-size{
+        width: 8rem;
+        height: 8rem;
+    }
+    .parent-testimonials{
+        color:white;
+        display:flex;
+        flex-direction: column;
+        text-align:center;
+        justify-content:center;
+        font-family:sans-serif;
+        letter-spacing:1px;
+        }
+     
+
+
+
+
+/* div{FOOTER-CONTENT} */
+
+    footer{
+        width:118rem;
+        height:15rem;
+        background-color:rgb(45, 213, 255);
+        width: 100%;}
+
+.footer-email{
+position: absolute;
+left:2rem;
+margin-top:1rem;
+}
+.text{
+padding:4px 4px 2px 4px ;
+}
+.email-content{
+color: black;
+font-size:13px;
+font-family: sans-serif;
+}
+.subscribe-button{
+position: absolute;
+background-color:black ;
+color: white;
+padding:2px 10px 1px 10px;
+left:20rem;
+margin-top:1rem;
+
+}
+.footer-text{
+margin-left:28rem;
+margin-top:1rem;
+font-family: sans-serif;
+font-size:1rem;
+position:absolute;
+color: black;
+}
+
+.black-theme{
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+    color: aliceblue;
+    padding:50px 20px 30px 20px ;
+    gap:20px;
+    }
+
+
+#last-layout{
+background-color:rgb(45, 213, 255);
+height:45px;
+padding:60px 0px 2px 0px ;
+
+
+}
+
+.material-container{
+display: flex;
+justify-content: center;
+gap:35px;
+cursor: pointer;
+}
+
+.material-container:hover{
+text-decoration: underline;
+}
+
+.faqs,.navigate,.Resources,.help-center,.research{
+padding:0px 10px 0px 10px;
+background-color:rgb(45, 213, 255);
+}
+
+.whatsapp-info{
+display:inline-flex;
+align-items: center;
+margin:15px 0px 3px 2px ;
+}
+
+
+
+@media screen and (max-width:584px) {
+
+
+.head-about{ margin: 10px 1px 0px 243px;}
+.lines {
+width: 25rem;}
+
+}
+
+
+
+
+@media screen and (max-width:540px) {
+.head-about{     margin: -15px 1px 0px 226px;}
+.lines {
+width: 25rem;}
+
+}
+
+
+
+@media screen and (max-width:512px) {
+.head-about{margin: -31px 1px 0px 213px;
+             }
+
+             .lines {
+                width: 20rem;
+                height:0.6rem;}
+                .about{
+                    padding: 95px 26px 0px 30px;
+                }
+        }
+
+
+       
+
+
+@media screen and (max-width:490px) {
+body{
+text-align: center;
+}
+.list-parent {
+left:15rem;}
+
+.head-about{margin:-60px 1px 0px 201px;
+        padding: 5px 10px 5px 10px;}
+        .lines {
+            width: 18rem;
+            height:0.6rem;}
+
+            .about{
+                padding:70px 26px 0px 30px;
+            }
+}
+
+
+@media screen and (max-width:460px) {
+.head-about{margin: -95px 1px 0px 190px;
+        padding: 5px 10px 5px 10px;}
+}
+
+
+@media screen and (max-width:412px) {
+.head-about{margin: -110px 0px 0px 190px;
+        padding:5px 10px 5px 10px;
+        font-size:18px;}
+
+        .footer-email{
+            position: absolute;
+            left:1rem;
+            margin-top:1rem;
+        }
+        .text{
+            padding:3px 2px 0px 2px ;
+        }
+        .email-content{
+            color: black;
+            font-size:12px;
+        }
+
+        .subscribe-button{
+            position: absolute;
+            background-color:black ;
+            color: white;
+            padding:0px 4px 0px 4px;
+            left:18rem;
+            margin-top:1rem;
+            
+          }
+}
+@media screen and (max-width:360px){
+
+.head-about{margin:-130px 0px 0px 155px;
+padding:5px 10px 5px 10px;
+font-size:18px;}
+
+.list-parent {
+    left:12rem;}
+}
+
+
+@media screen and (max-width:365px){
+
+.head-about{margin:-150px 0px 0px 167px;
+padding:5px 10px 5px 10px;
+font-size:18px;}
+
+
+.footer-email{
+position: absolute;
+left:1rem;
+margin-top:1rem;
+}
+.text{
+padding:3px 0px 0px 0px ;
+}
+.email-content{
+color: black;
+font-size:12px;
+}
+
+.subscribe-button{
+position: absolute;
+background-color:black ;
+color: white;
+padding:0px 2px 0px 2px;
+left:15rem;
+margin-top:1rem;
+
+}
+}       
+
+
+@media screen and (max-width:320px) {
+.head-about{margin: -94px 1px 0px 145px;
+        padding:5px 10px 5px 10px;}
+        .list-parent {
+            left:12rem;}
+
+            .professional-head{
+                font-size:1.5rem;
+                margin:135px 15px 0px 19px;
+            }
+
+            .footer-email{
+                position: absolute;
+                left:1rem;
+                margin-top:1rem;
+            }
+            .text{
+                padding:3px 0px 0px 0px ;
+            }
+            .email-content{
+                color: black;
+                font-size:12px;
+            }
+
+            .subscribe-button{
+                position: absolute;
+                background-color:black ;
+                color: white;
+                padding:0px 2px 0px 2px;
+                left:15rem;
+                margin-top:1rem;
+                
+              }
+            }
+
+
+@media screen and (max-width:600px) {
+
+html,body{
+padding: 0;
+margin: 0;
+}
+.material-container{
+display: block;
+overflow-y: scroll;
+}
+#last-layout{
+height:290%;
+}
+.black-theme{
+margin-top:25rem;
+position: relative;
+}
+.footer-text{
+margin-left: 13rem;
+margin-top:6.9rem ;
+}
+}
+
+
+@media screen and (max-width:780px) {
+.black-theme{
+display: block;
+}
+}
+    </style>
+
+</head>
+<body>
+
+
+    <!-- <div>NAV-BAR</div> -->
+
+   
+     <nav class="parent">
+      
+        <ul>
+            <hr>
+            <br>
+            <li><img class="left-image" src="background image.jpg" alt="" width=20%></li>             
+            <br>
+            <br>
+            <div class="right-nav">
+            <li class="none" > <a href="#">HOME</a></li>
+            <li class="none" > <a href="#last-layout">ABOUT</a></li>
+            <li class="none" > <a href="#scroll-click">SERVICES</a></li>
+            <li class="none" > <a href="https://mubashiryasir179.github.io/My-portfolio.github.io/#" target="_blank">MY PORTFOLIO</a></li>
+            <li class="not" onclick=showSidebar()><svg
+                xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" width="25" fill="#ffff">
+                <path d=" M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+            </svg></a></li>
+
+        </ul>
+        
+        <ul class="Slide-bar" >
+            <li class="cross" onclick=hideSidebar()><a href="#" style="padding:18px 5px 1px 5px;"><svg
+                xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30" fill="white">
+                <path
+                    d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+            </svg></a></li>
+            <br>
+            <br>             
+            <br>
+            <br>
+            <div class="Slide-nav">
+            <li> <a href="#">HOME</a></li>
+            <li> <a href="#last-layout">ABOUT</a></li>
+            <li> <a href="#scroll-click">SERVICES</a></li>
+            <li> <a href="#" target="_blank">MY PORTFOLIO</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.Slide-bar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.Slide-bar')
+            sidebar.style.display = 'none'
+        }
+        </script>
+
+ 
+
+
+<!-- <div>  3 BOXES  </div> -->
+
+
+
+
+ <h1 id="scroll-click">
+        OUR SERVICES
+    </h1>
+    <br>
+    <br>
+    <br>
+    <br>
+ 
+    <div class="container">
+    <div class="wrapper">
+        <br>
+        <br>
+        
+        <div class="basic">
+            BASIC PACKAGE
+        </div>
+        <br>
+        <div class="dollar">
+            5$
+        </div>
+       <div class="coding">Web Development</div>
+       <br>
+       <div class="ocuppy">
+          <div class="html">
+             <i class="fa fa-check-circle" aria-hidden="true"></i>
+        Html 5 will be included in this plan
+        <br>
+        <br>
+     </div>
+     
+        <div class="css">
+         <i class="fa fa-check-circle" aria-hidden="true"></i>
+        Css 3 will be included in this plan</div>
+        <br>
+        <div class="javascript">
+         <i class="fa fa-check-circle" aria-hidden="true"></i>
+        Javascript JS a little bit javascript will be added  
+        <br>
+        <br>
+        <i class="fa fa-check-circle" aria-hidden="true"></i>
+        Domain and hosting must be already bought 
+     </div>
+ </div>
+        
+    </div>
+ 
+    <div class="box">
+        <br>
+     <div class="standard">STANDARD PACKAGE</div>
+     <br>
+     <div class="dollar">
+         10$
+     </div>
+     
+        <div class="wordpress">Wordpress</div>
+     <br>
+     <div class="ocuppy">
+     <i class="fa fa-check-circle" aria-hidden="true"></i>
+     Payment order quantity
+     <br>
+     <br>
+     <i class="fa fa-check-circle" aria-hidden="true"></i>
+     Payment order quantity to reach
+     <br>
+     <br>
+     <i class="fa fa-check-circle" aria-hidden="true"></i>
+     Bulk Order List
+     <br>
+     <br>
+     <i class="fa fa-check-circle" aria-hidden="true"></i>
+     Request a quotes
+     <br>
+     <br>
+     <i class="fa fa-check-circle" aria-hidden="true"></i>
+     Custom registraion form
+     <br>
+ </div>
+ </div>
+   
+    <div class="content">
+        <br>
+        <br>
+        <div class="professional">PROFESSIONAL PACKAGE</div>
+        <br>
+        <div class="dollar">
+         15$
+     </div>
+     <div class="graphic">
+         Graphic Designing
+     </div>
+     <br>
+     <div class="ocuppy">
+         <i class="fa fa-check-circle" aria-hidden="true"></i>
+        Adobe Photoshop
+        <br>
+        <br>
+        <i class="fa fa-check-circle" aria-hidden="true"></i>
+        Adobe Illustrator
+        <br>
+        <br>
+        <i class="fa fa-check-circle" aria-hidden="true"></i>
+        UI/UX
+        <br>
+        <br>
+        <i class="fa fa-check-circle" aria-hidden="true"></i>
+        <b>Note</b>
+        <br>
+        we create logos social media posts thumnails visiting and business cards brocher banner and each an every </div>  
+    </div>
+ </div>
+ <br>
+ <br>
+ <br>
+ <br> 
+
+
+
+
+
+<!-- <div>  3 CIRCLES  </div> -->
+
+
+
+
+     <div class="full-box">
+        <div class="half-box1">
+            <br>
+            <br>
+            <br>
+            <div class="child"><i class="fa fa-laptop fa-5x" aria-hidden="true"></i>
+            </div>
+            <br>
+            <br>
+            <br>
+            <b>RESPONSIVE</b>
+            <br>
+            <br>
+            <br>
+            &nbsp;&nbsp; &nbsp; &nbsp;From here you'll get&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;responsivness design with&nbsp;good quality job        
+        </div>
+     
+        <div class="half-box2">
+            <br>
+            <br>
+            <br>
+            <div class="child"><i class="fa fa-heart fa-5x" aria-hidden="true"></i>
+      
+            </div>
+            <br>
+            <br>
+            <br>
+            <b> HIGH QUALITY</b>
+            <br>
+            <br>
+            <br>
+            &nbsp;There will be no any &nbsp;&nbsp;&nbsp;compromise in quality and&nbsp;&nbsp;no any regrets
+        </div>
+        <div class="half-box3">
+           <br>
+           <br>
+           <br> 
+           <div class="child"><i class="fa fa-code-fork fa-5x" aria-hidden="true"></i>  
+           </div>
+           <br>
+           <br>
+           <br>
+           <b>DEADLINES</b> 
+           <br>
+           <br>
+           <br>    
+           &nbsp;&nbsp;&nbsp;&nbsp; in short time of a period &nbsp;&nbsp;&nbsp;you'll get your design &nbsp;&nbsp;&nbsp;ready and the cost will be&nbsp;depended
+        </div>
+    </div>
+
+
+
+
+
+<!-- <div>RESPONSIVE-ANIMATION</div> -->
+
+
+
+
+      <div class="cre-ation">
+        MY CREATION
+    </div>
+    <br>
+    <br>
+    <div class="slider">
+        <div class="slider-track">
+           
+    <div class="slide"><img src="mycreation10.jpg" alt=""></div>
+            <br>
+            <div class="slide"><img src="mycreation13.jpg" alt=""></div>
+            <br>
+            <div class="slide"><img src="mycreation (1).jpg" alt=""></div>
+            <br>
+            <div class="slide"><img src="mycreation10.jpg" alt=""></div>
+            <br>
+            <div class="slide"><img src="mycreation13.jpg" alt=""></div>
+            <br>
+            <div class="slide"><img src="mycreation (1).jpg" alt=""></div>
+            <br>
+            <div class="slide"><img src="mycreation10.jpg" alt=""></div>
+            <br>
+            <div class="slide"><img src="mycreation13.jpg" alt="" ></div>
+            <br>
+            <div class="slide"><img src="mycreation (1).jpg" alt=""></div>
+             <br>
+            <div class="slide"><img src="mycreation10.jpg" alt=""></div>
+            <br>
+            <div class="slide"><img src="mycreation13.jpg" alt=""></div>
+            <br>
+            <div class="slide"><img src="mycreation (1).jpg" alt=""></div>
+            <br>
+            <div class="slide"><img src="mycreation10.jpg" alt=""></div>
+            <br>
+            <div class="slide"><img src="mycreation13.jpg" alt=""></div>
+            <br>
+            <div class="slide"><img src="mycreation (1).jpg" alt=""></div>
+            <br>
+            <div class="slide"><img src="mycreation10.jpg" alt=""></div>
+            <br>
+            <div class="slide"><img src="mycreation13.jpg" alt=""></div>
+            <br>
+            <div class="slide"><img src="mycreation (1).jpg" alt=""></div>
+        </div>
+    </div>
+
+
+
+
+
+
+<!-- <div> ANIMATION-FORM </div> -->
+
+      <br><br><br><br><br><br><br><br><br><br><br><br><br>
+     <h2 class="form-heading">FILL THIS FORM TO BOOK YOUR APPOINTMENT</h2>
+     
+     <div class="father">
+         <div class="big-box"></div>
+         <div class="last-box"></div> 
+            
+             <form>
+                 <br>
+                 <div class="require-info">
+             <span class="require">REQUIRE</span><span class="info">INFORMATION</span> 
+         </div>
+                 <div class="easy">
+                 <input class="child" type="text" placeholder="First Name" required>
+                  <input class="child" type="text" placeholder="Last Name" required>
+             </div>
+                 <div class="difficult">
+                     <input class="child" type="email" name="" id="" placeholder="Enter Email" required>
+                     <input class="child" type="number" name="" id="" placeholder="phone number" required>
+                 </div>
+                 <br>
+                 <br>
+                 <span class="select-gender">
+                     <label class="top">Gender</label>
+                     <br>
+                     <br>
+                     <br>
+                     <i class="fa-solid fa-person fa-2xl"></i>
+                     <label class="left">Male</label>
+                     <input type="radio" name="Gender" id="Male">
+                     <i class="fa-solid fa-person-dress fa-2xl"></i>
+                     <label class="right">Female</label>
+                     <input type="radio" name="Gender" id="Female">
+                 </span>
+                 &nbsp;
+                 &nbsp;
+                 &nbsp;
+                 &nbsp;
+                 &nbsp;
+                 <div class="responsive-material">
+                     <span class="select-any">
+                     <select class="selection" name="" id="select Any">
+                         <option class="selection"  value="select Any">Select Any</option>
+                         <option class="selection" value="Front-End">Front-End</option>
+                         <option class="selection" value="Back-End">Back-End</option>
+                         <option class="selection" value="Full-Stack">Full-Stack</option>
+                         <option class="selection" value="Mern-Stack">Mern-Stack</option>
+                     </select>
+                 </span>
+                 <br>
+                 <div class="comments">
+                     <textarea class="textarea" name="" id="" cols="30" rows="10" placeholder="Enter Your Desire Requirment...!"></textarea>
+                 </div>
+                 <br>
+                
+                 <div class="submit-button">
+                     <button>Submit</button>
+                    </div>
+                 </div>
+             </form>
+         </div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div>  CLIENTS-REMARKS </div> -->
+
+
+ <br><br><br><br>
+    <h2 class="testimonial-head">CLIENT'S REMARKS</h2>
+    <br><br><br><br>
+    <div class="parent-code">
+        <div class="html-code"><box-icon type='logo' class="icon-size" color='#C95d2e' name='html5'></box-icon>
+            <br>
+            <h2 class="icon-head">HTML 5</h2>
+            <br>
+             "Working with Muhammad Mubashir has been an absolute pleasure.
+             Their HTML skills are top-notch, and they consistently deliver high-quality work. 
+            I highly recommend Muhammad Mubashir for any web development project."  
+            "Muhammad Mubashir is a true HTML guru.Their attention to detail and dedication to producing clean and error-free code is unmatched. 
+             I've had the privilege of collaborating with Muhammad Mubashir on several projects, and I'm always impressed by the results."
+        </div> 
+      <div class="css-code"><box-icon type='logo' class="icon-size" color='#147bbc' name='css3'></box-icon>
+        <br>
+        <h2 class="icon-head">CSS 3</h2>
+        <br>
+       "I've had the pleasure of working with Muhammad Mubashir on several projects,
+         and their CSS skills are truly outstanding. Their ability to craft visually stunning and responsive designs
+          with CSS is a testament to their expertise in web development."
+        "Muhammad Mubashir is a CSS wizard! Their attention to detail and understanding of CSS intricacies is impressive.
+         I've witnessed Muhammad Mubashir turn complex design concepts into flawless, pixel-perfect layouts. I highly recommend them for any CSS-related task."
+       </div>
+      <div class="java-code"><box-icon type='logo' class="icon-size"color='#5dbc1e'name='nodejs'></box-icon>
+        <br>
+        <h2 class="icon-head">JAVASCRIPT NODE.JS</h2>
+        <br>
+        "I've had the privilege of collaborating with Muhammad Mubashir on various projects, and their JavaScript skills are truly remarkable. They have an exceptional ability to write clean, efficient, and maintainable code that brings interactivity and dynamism to web applications. I highly recommend Muhammad Mubashir for any JavaScript development work."
+
+"Muhammad Mubashir is a JavaScript maestro. Their in-depth knowledge of the language, frameworks, and libraries is evident in their work. I've seen Muhammad Mubashir turn complex ideas into functional and user-friendly web applications with JavaScript. Their problem-solving skills are second to none."
+    </div>
+    </div>
+    <br><br><br><br>
+    <div class="parent-testimonials">
+        <div class="html-code"><box-icon type='logo' class="icon-size" color="#3AB7FF" name='tailwind-css'></box-icon>
+            <br>
+            <h2 class="icon-head">TAILWIND CSS</h2>
+            <br>
+"When it comes to building our startup's web presence, Muhammad Mubashir is our go-to expert for Tailwind CSS. His knowledge of the framework and its responsive design capabilities have allowed us to create a visually stunning and user-friendly platform. Muhammad Mubashir is reliable, innovative, and integral to bringing our vision to life."
+
+"We've had the pleasure of working with Muhammad Mubashir for quite some time, and his proficiency in Tailwind CSS has transformed our marketing campaigns. His ability to create visually appealing landing pages and email templates quickly and efficiently is unparalleled.
+        </div> 
+      <div class="css-code"><box-icon type='logo' class="icon-size" color="#69bcbc" name='react'></box-icon>
+       <br>
+       <h2 class="icon-head"> REACT.JS</h2>
+       <br>
+       "Working with Muhammad Mubashir has been a game-changer for our software development projects. His mastery of React.js is truly outstanding. He consistently delivers well-structured, high-performance code that powers our web applications. Thanks to his expertise, our projects are not only more robust but also more user-friendly. I highly recommend Muhammad Mubashir for React.js development."
+       "Muhammad Mubashir is a true React.js guru. His contributions to our startup's web application have been invaluable. His code quality, problem-solving skills, and commitment to deadlines have made our platform more scalable and user-friendly.
+       </div>
+      <div class="java-code"><box-icon type='logo' class="icon-size" color="purple" name='bootstrap'></box-icon>
+        <br>
+        <h2 class="icon-head">BOOTSTRAP</h2>
+        <br>
+        "I've had the privilege of collaborating with Muhammad Mubashir on various projects, and their JavaScript skills are truly remarkable. They have an exceptional ability to write clean, efficient, and maintainable code that brings interactivity and dynamism to web applications. I highly recommend Muhammad Mubashir for any JavaScript development work."
+
+"Muhammad Mubashir is a JavaScript maestro. Their in-depth knowledge of the language, frameworks, and libraries is evident in their work. I've seen Muhammad Mubashir turn complex ideas into functional and user-friendly web applications with JavaScript. Their problem-solving skills are second to none."
+</div>
+</div>
+
+
+<br><br><br><br><br>
+
+
+<footer>
+    <div class="footer-email">
+        <span class="email-content">STAY UP-TO-DATE</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="text"
+            type="email" name="" id="" placeholder="Email Address">
+    </div>
+    <div class="subscribe-button">Subscribe</div>
+    <div class="footer-text">For any further details write your email and subscribe us now...!</div>
+
+
+    <div id="last-layout">
+        <div class="footer-email">
+            <div class="material-container">
+                <div class="faqs">
+                    <br>
+                    <b>FAQS</b>
+                    <br>
+                    ask any question
+                    <br>
+                    about the code
+                    <br>
+                    reservation
+                    <br>
+                    Our progress
+                </div>
+                <div class="help-center">
+                    <br>
+                    <b>HELP CENTER</b>
+                    <br>
+                    Fill details
+                    <br>
+                    Contact us
+                    <br>
+                    Meet us
+                </div>
+                <div class="research">
+                    <br>
+                    <b>RESEARCH</b>
+                    <br>
+                    Research Approach
+                    <br>
+                    Policy Briefs
+                    <br>
+                    Edlandscapers
+                    <br>
+                    Partner publications
+                </div>
+                <div class="navigate">
+                    <br>
+                    <b>NAVIGATE</b>
+                    <br>
+                    Web designs
+                    <br>
+                    Portfolio
+                    <br>
+                    web development
+                    <br>
+                    Careers
+                </div>
+                <div class="Resources">
+                    <br>
+                    <b> RESOURCES</b>
+                    <br>
+                    Blog
+                    <br>
+                    Newsletter
+                    <br>
+                    Privacy policy
+                    <br>
+                    Press
+                </div>
+            </div>
+        </div>
+        <br><br><br><br><br><br><br><br><br>
+        <div class="black-theme">
+            <hr>
+            <br><br><br>
+            <div class="contact-info">CONTACT INFORMATION
+                <br>
+                <br>
+                <div class="email-info"><i class="fa fa-envelope fa-xl" style="color: #2dd5ff;"
+                        aria-hidden="true "></i>
+                    mubashirrajput163@gmail.com</div> &nbsp;&nbsp;&nbsp;
+            </div>
+            <div class="phone-info"><i class="fa-solid fa-phone fa-xl" style="color: #2dd5ff;"></i>+92 3161169226
+                <div class="whatsapp-info"><i class="fa-brands fa-whatsapp fa-xl" style="color: #2dd5ff;"></i>
+                    <div class="what-num">+92&nbsp;3432321316</div>
+                </div>
+            </div>
+
+            <div class="last-head">All &copy; Copyright-Reserved &reg; 2023</div>
+            <div class="social-text">For more updates and information follow me on
+                <br><br>
+                <a href="https://www.facebook.com/mubasher.yasir.5?mibextid=ZbWKwL" target="_blank"
+                    rel="noopener noreferrer"><span class="facebook"><i class="fa-brands fa-facebook fa-xl"
+                            style="color: #2dd5ff;"></i></a>&nbsp;|
+                <a href="https://www.instagram.com/mubashirrajput163/" target="_blank" rel="noopener noreferrer">
+                    <span class="instagram"><i class="fa-brands fa-instagram fa-xl"
+                            style="color: #2dd5ff;"></i></span></a>&nbsp;|
+                <a href="https://www.youtube.com/@MUHAMMADMUBASHIR-di2vo" target="_blank" rel="noopener noreferrer">
+                    <span class="youtube"><i class="fa-brands fa-youtube fa-xl"
+                            style="color: #2dd5ff;"></i></span></a>&nbsp;|
+                <a href="https://github.com/mubashiryasir179/mubashiryasir179.git" target="_blank"
+                    rel="noopener noreferrer"><span class="git-hub"><i class="fa-brands fa-github fa-xl"
+                            style="color: #2dd5ff;"></i></span></a>&nbsp;|
+                <a href="https:linkedin.com/in/muhammad-mubashir-7a3901254" target="_blank"
+                    rel="noopener noreferrer"><span class="linkedin"><i class="fa-brands fa-linkedin fa-xl"
+                            style="color: #2dd5ff;"></i></span></span></a>&nbsp;
+                <br><br><br>
+                <hr>
+            </div>
+        </div>
+
+</footer>
+</body>
+</html>
